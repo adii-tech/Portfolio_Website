@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Send Email Button</title>
+  </head>
+  <body>
+    <h1>Click the button to send an email</h1>
+    <button onclick="sendEmail()">Send Email</button>
+    <script>
+      function sendEmail() {
+        // Replace the email address below with the address you want to send to
+        let email = "kadamaditya1972@gmail.com";
+        // let bodyText = document.getElementsByClassName('yourMessage').value;
+        // let userFullName = document.getElementsByClassName('fullName').value;
+        let bodyText ="jiek ekfjlekf jlke fe";
+        let userFullName ="Omk Sofs";
+        // To convert a string to another string with the words separated by "%20"
+        let mailBody = bodyText.replace(/ /g, "%20");
+        let mailSubject = userFullName.replace(/ /g, "%20");
+
+        // Use the JavaScript "mailto" function to open the default email client
+        // with the recipient, subject, and body pre-filled
+        window.location.href =
+          "mailto:" +
+          email +
+          `?subject=${mailSubject}&body=${mailBody}`;
+      }
+    </script>
+  </body>
+</html>
